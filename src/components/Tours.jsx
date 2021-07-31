@@ -36,11 +36,13 @@ return(
  
               </div>
  
-              <p>
+            <p>
  
-                {tour.info}
- 
-              </p>
+ {readMore ? tour.info: `${tour.info.substring(0,200)} . . .`}
+  
+ <button onClick={() => setReadMore(!readMore)}>{readMore ? 'read less' : 'read more'}</button>     
+  
+ </p>
  
             </footer>
  
